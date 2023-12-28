@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&family=Pacifico&family=Righteous&family=Short+Stack&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Righteous&family=Short+Stack&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Short+Stack&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="CSS/bootstrap.min.css">
+        <link rel="stylesheet" href="CSS/index_style.css">
+    </head>
+
+    <body>
+              <!-- Bookmark Body -->
+        <div class="container d-flex flex-column align-items-center justify-content-center">
+            <h1>Bookmarker</h1>
+            <div class="bookmark-body mt-3 p-3 w-100">
+                <h2 class="text-center">
+                    <i class="fa-solid fa-bookmark"></i>
+                    Bookmark your favourite sites
+                    <i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="bookmark-form p-3 mt-3 d-flex flex-column align-items-start justify-content-start">
+                    <label class="fw-bold"><i class="fa-solid fa-book-bookmark"></i>  Site Name</label>
+                    <input id="input1" class="form-control" placeholder="Bookmark Name">
+                    <label  class="mt-4 fw-bold"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input id="input2" class="form-control" placeholder="Website URL">
+                    <button class="btn mx-auto mt-3 p-2 px-5 submit-btn"  id="submit-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Submit</button>
+                    <button class="btn mx-auto mt-3 p-2 px-5 submit-btn d-none"  id="update-btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Update</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search -->
+        <input class="form-control w-50 mx-auto my-3" placeholder="Search Bookmark" type="text" id="searchId" oninput="search(this.value)">
+
+        <!-- Bookmark Table -->
+       <div class="container">
+        <table class="table bg-light mt-4 text-center">
+            <thead>
+                <th>Index</th>
+                <th>Website Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </thead>
+            <tbody id="tBody"></tbody>
+        </table>
+       </div>
+
+       <!-- Validation Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+                <div class="d-flex circles">
+                  <span class="rounded-circle circle d-block"></span>
+                  <span class="rounded-circle circle d-block"></span>
+                  <span class="rounded-circle circle d-block"></span>
+                </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p>Site Name or Url is not valid, Please follow the rules below :</p>
+              <p><i class="fa-solid fa-arrow-right"></i> Site name must contain at least 3 characters</p>
+                <p><i class="fa-solid fa-arrow-right"></i> Site URL must be a valid one</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        <script src="JS/bootstrap.bundle.js"></script>
+        <script src="JS/mine.js"></script>
+    </body>
+</html>
